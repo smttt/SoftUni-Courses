@@ -1,0 +1,82 @@
+package BasicSyntaxConditionalStatementsandLoopsExercise;
+
+import java.util.Scanner;
+
+public class _3_Vacation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int sumOfPeople=Integer.parseInt(scanner.nextLine());
+        String typeOfTheGroup=scanner.nextLine();
+        String dayOfTheWeek =scanner.nextLine();
+        double price=0;
+
+        switch (dayOfTheWeek) {
+            case "Friday":
+                if (typeOfTheGroup.equals("Students")) {
+                    if (sumOfPeople>=30){
+                        price=(8.45*sumOfPeople)*0.85;
+                    }else {
+                        price=8.45*sumOfPeople;
+                    }
+                } else if (typeOfTheGroup.equals("Business")) {
+                    if (sumOfPeople>=100){
+                        price=(sumOfPeople-10)*10.90;
+                    }else {
+                        price=sumOfPeople*10.90;
+                    }
+                } else if (typeOfTheGroup.equals("Regular")) {
+                    if (sumOfPeople>=10 && sumOfPeople<=20) {
+                        price=sumOfPeople*15*0.95;
+                    }else {
+                        price=sumOfPeople*15;
+                    }
+                }
+                break;
+            case "Saturday":
+                if (typeOfTheGroup.equals("Students")) {
+                    if (sumOfPeople>=30){
+                        price=(9.80*sumOfPeople)*0.85;
+                    }else {
+                        price=9.80*sumOfPeople;
+                    }
+                } else if (typeOfTheGroup.equals("Business")) {
+                    if (sumOfPeople>=100){
+                        price=(sumOfPeople-10)*15.60;
+                    }else {
+                        price=sumOfPeople*15.60;
+                    }
+                } else if (typeOfTheGroup.equals("Regular")) {
+                    if (sumOfPeople>=10 && sumOfPeople<=20) {
+                        price=sumOfPeople*20*0.95;
+                    }else {
+                        price=sumOfPeople*20;
+                    }
+                }
+                break;
+            case "Sunday":
+                if (typeOfTheGroup.equals("Students")) {
+                    if (sumOfPeople>=30){
+                        price=(10.46*sumOfPeople)*0.85;
+                    }else {
+                        price=10.46*sumOfPeople;
+                    }
+                } else if (typeOfTheGroup.equals("Business")) {
+                    if (sumOfPeople>=100){
+                        price=(sumOfPeople-10)*16;
+                    }else {
+                        price=sumOfPeople*16;
+                    }
+                } else if (typeOfTheGroup.equals("Regular")) {
+                    if (sumOfPeople>=10 && sumOfPeople<=20) {
+                        price=sumOfPeople*22.50*0.95;
+                    }else {
+                        price=sumOfPeople*22.50;
+                    }
+                }
+                break;
+        }
+        System.out.printf("Total price: %.2f",price);
+
+    }
+}
