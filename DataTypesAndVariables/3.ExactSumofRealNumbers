@@ -1,0 +1,19 @@
+package LabDataTypesandVariables;
+
+import java.math.BigDecimal;
+import java.util.Scanner;
+
+public class _3_ExactSumOfRealNumbers {
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+
+        int numbersCount=Integer.parseInt(scanner.nextLine());
+
+        BigDecimal sum=new BigDecimal(0);
+        for (int number = 1; number <= numbersCount ; number++) {
+            BigDecimal readingNumbers=new BigDecimal(scanner.nextLine());
+            sum = sum.add(readingNumbers);
+        }
+        System.out.println(sum);
+    }
+}
