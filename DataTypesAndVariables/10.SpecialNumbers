@@ -1,0 +1,22 @@
+package LabDataTypesandVariables;
+
+import java.util.Scanner;
+
+public class _10_SpecialNumbers {
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+
+        short number = Short.parseShort(scanner.nextLine());
+
+        for (int position = 1; position <= number; position++) {
+
+            if (position % 5 == 0 || position % 7 == 0 || position % 11 == 0 ) {
+                System.out.println(position + "-> True");
+            }
+            else {
+                System.out.println(position + "-> False");
+            }
+
+        }
+    }
+}
